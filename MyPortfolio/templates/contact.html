@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact - Sanjeet Thapa{% endblock %}
+
+{% block content %}
+<h2 style="color: #3498db;">Get in Touch</h2>
+<p>If you'd like to contact me, feel free to reach out through the form below or email me directly.</p>
+
+<form action="" method="post" style="margin-top: 20px;">
+  {% csrf_token %}
+  <label>Name:</label><br>
+  <input type="text" name="name" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 8px;" required><br>
+
+  <label>Email:</label><br>
+  <input type="email" name="email" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 8px;" required><br>
+
+  <label>Message:</label><br>
+  <textarea name="message" rows="5" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 8px;" required></textarea><br><br>
+
+  <button type="submit" style="padding: 12px 25px; background-color: #3498db; color: white; border: none; border-radius: 8px; font-weight: bold;">Send Message</button>
+</form>
+{% endblock %}
